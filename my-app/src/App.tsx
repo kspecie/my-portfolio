@@ -1,4 +1,4 @@
-import Headshot from './components/Headshot.tsx';
+import Headshot from './components/Headshot/Headshot.tsx';
 import Info from './components/Info.tsx';
 import './App.css'
 

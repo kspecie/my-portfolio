@@ -1,7 +1,7 @@
 import React from 'react';
 import LinkedInIcon from '../assets/LinkedInIcon.png';
 import styles from './Info.module.css';
-import MBA_to_AI_Engineer_Kayla_Specie from '../../public/MBA_to_AI_Engineer_Kayla_Specie.m4a'
+import KaylaSpecieSummary from '../../public/KaylaSpecieSummary.m4a'
 
 interface CardProps {
     icon?: string | React.ReactNode;
@@ -31,7 +31,7 @@ export default function Info(){
       <div className={styles.infoContainer}>
         <div className={styles.audioContainer}>
           <audio controls>
-            <source src={MBA_to_AI_Engineer_Kayla_Specie} type='audio/mp4' />
+            <source src={KaylaSpecieSummary} type='audio/mp4' />
             Your browser does not support the video tag.
           </audio>
         </div>

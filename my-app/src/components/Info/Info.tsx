@@ -1,30 +1,30 @@
-import React from 'react';
+//import React from 'react';
 //import LinkedInIcon from '../assets/LinkedInIcon.png';
 import styles from './Info.module.css';
 import KaylaSpecieSummary from '../../../public/KaylaSpecieSummary.m4a'
 
-interface CardProps {
-    icon?: string | React.ReactNode;
-    title: string;
-    content?: string;
-}
+// interface CardProps {
+//     icon?: string | React.ReactNode;
+//     title: string;
+//     content?: string;
+// }
 
 
-function Card({ icon, title, content }: CardProps){
-    return (
-        <div className={styles.card}>
-            <h2 className={styles.cardTitle}>
-                {icon && (
-                    typeof icon === 'string' ? (
-                    <span className={styles.cardIcon}>{icon}</span>
-                    ) : (icon)
-                )}
-                {title}
-            </h2>
-            <p className={styles.cardContent}>{content}</p>
-        </div>
-    )
-}
+// function Card({ icon, title, content }: CardProps){
+//     return (
+//         <div className={styles.card}>
+//             <h2 className={styles.cardTitle}>
+//                 {icon && (
+//                     typeof icon === 'string' ? (
+//                     <span className={styles.cardIcon}>{icon}</span>
+//                     ) : (icon)
+//                 )}
+//                 {title}
+//             </h2>
+//             <p className={styles.cardContent}>{content}</p>
+//         </div>
+//     )
+// }
 
 export default function Info(){
     return (

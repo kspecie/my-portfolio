@@ -1,25 +1,25 @@
 
-import KaylaHeadshot from '../../assets/KaylaHeadshot.png';
+//import KaylaHeadshot from '../../assets/KaylaHeadshot.png';
 import styles from './Headshot.module.css';
-import { useState } from 'react';
+//import { useState } from 'react';
 
 
 export default function Headshot(){
 
-  const [loaded, setLoaded] = useState(false);
+  //const [loaded, setLoaded] = useState(false);
   
-  function handleClick() {
-    alert("Hello! Thanks for clicking on my headshot!");
-  }
+  // function handleClick() {
+  //   alert("Hello! Thanks for clicking on my headshot!");
+  // }
     return (
       <div className={styles.headshotContainer}>
         <p className={styles.funFont2}>
           Click for Fun Facts! <br></br>&darr;{" "}
         </p>
-        <button className={styles.headshot} onClick={handleClick}>
-          {!loaded && <div className={styles.placeholder}> </div>}
+        {/* <button className={styles.headshot} onClick={handleClick}>
+          {!loaded && <div className={styles.placeholder}> </div>} */}
 
-          <img
+          {/* <img
             src={KaylaHeadshot}
             width='400'
             height='400'
@@ -28,8 +28,8 @@ export default function Headshot(){
             }`}
             onLoad={() => setLoaded(true)}
             alt="Kayla's Face"
-          ></img>
-        </button>
+          ></img> */}
+        {/* </button> */}
 
         <h1 className={styles.funFont2}>
           Hi, I'm Kayla!

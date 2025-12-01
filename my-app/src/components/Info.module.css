@@ -1,14 +1,28 @@
+.funFont2 {
+  font-family: "LXGW WenKai TC", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .infoContainer {
     /* border: 5px solid #D61B3D;  */
-    padding: 20px;
+    padding: 5px;
 }
 
 .audioContainer {
-    margin-top: 15px;
     display: flex;
+    padding: 5px;
+    /* border: 5px solid green; */
+    flex-direction: column;
     justify-content: center;
-
+    align-items: center;
 }
+
+.audioContainer p a {
+    color: black;
+    text-decoration: underline;
+}
+
 .cardContainer {
     display: flex;
     justify-content: space-around;

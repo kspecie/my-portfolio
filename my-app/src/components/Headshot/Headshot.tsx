@@ -12,9 +12,11 @@ export default function Headshot(){
     alert("Hello! Thanks for clicking on my headshot!");
   }
     return (
-      <div className={styles.headshotContainer} onClick={handleClick}>
-        <p className={styles.funFont2}>Click for Fun Facts! <br></br>&darr; </p>
-        <button className={styles.headshot}>
+      <div className={styles.headshotContainer}>
+        <p className={styles.funFont2}>
+          Click for Fun Facts! <br></br>&darr;{" "}
+        </p>
+        <button className={styles.headshot} onClick={handleClick}>
           {!loaded && <div className={styles.placeholder}> </div>}
 
           <img

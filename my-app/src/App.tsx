@@ -1,6 +1,9 @@
 import Headshot from './components/Headshot/Headshot.tsx';
 import Info from './components/Info.tsx';
-import './App.css'
+// import styles from './App.module.css'
+
+
+
 
 function App() {
 
@@ -8,7 +11,7 @@ function App() {
     <>
       <Headshot />
       <Info />
-     </>
+    </>
   );
 }
 

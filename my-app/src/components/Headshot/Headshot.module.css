@@ -12,23 +12,10 @@
   width: 400px;
   border-radius: 50%;
   overflow: hidden;
-  padding: 0;
-  background: transparent;
-  position: relative;
-  display: block;
-  line-height: 0;
+  background: white;;
   cursor: pointer;
-  outline: none;
   box-shadow:
   0 10px 20px rgba(0,0,0,5);              
-}
-
-.headshot::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  pointer-events: none;
 }
 
 .headshot:hover {
@@ -38,7 +25,7 @@
 .headshot:active {
   box-shadow:
     0 2px 2px rgba(0,0,0,0.25);
-}
+} 
 
 .headshot:focus,
 .headshot:focus-visible {
@@ -74,6 +61,7 @@
   display: inline-block;
   transform-origin: 70% 70%;
   animation: handWave 2.0s ease-in-out 0.4s 2;
+  margin-left: 15px;;
 }
 
 @keyframes handWave {
@@ -86,4 +74,17 @@
   70% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
 }
+
+.funFont {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.funFont2 {
+  font-family: "LXGW WenKai TC", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
 

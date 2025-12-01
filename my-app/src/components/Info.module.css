@@ -3,6 +3,12 @@
     padding: 20px;
 }
 
+.audioContainer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+
+}
 .cardContainer {
     display: flex;
     justify-content: space-around;

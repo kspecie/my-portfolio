@@ -1,7 +1,7 @@
 import React from 'react';
 import LinkedInIcon from '../assets/LinkedInIcon.png';
 import styles from './Info.module.css';
-
+import MBA_to_AI_Engineer_Kayla_Specie from '../../public/MBA_to_AI_Engineer_Kayla_Specie.m4a'
 
 interface CardProps {
     icon?: string | React.ReactNode;
@@ -29,7 +29,13 @@ function Card({ icon, title, content }: CardProps){
 export default function Info(){
     return (
       <div className={styles.infoContainer}>
-        <div className={styles.cardContainer}>
+        <div className={styles.audioContainer}>
+          <audio controls>
+            <source src={MBA_to_AI_Engineer_Kayla_Specie} type='audio/mp4' />
+            Your browser does not support the video tag.
+          </audio>
+        </div>
+        {/* <div className={styles.cardContainer}>
           <Card 
             icon="📍" 
             title="London, UK" 
@@ -42,8 +48,7 @@ export default function Info(){
             icon="" 
             title="GitHub" 
           />
-        </div>
-        <p>Test About Me</p>
+        </div> */}
       </div>
     );
 }

@@ -12,10 +12,11 @@
 .audioContainer {
     display: flex;
     padding: 5px;
+    margin-bottom: 50px;
     /* border: 5px solid green; */
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;;
 }
 
 .audioContainer p a {
@@ -23,47 +24,3 @@
     text-decoration: underline;
 }
 
-.cardContainer {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    /* border: 3px solid blue; */
-    padding: 15px;
-    margin-top: 15px;
-    gap: 15px;
-}
-
-.card { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: 5px solid black;  */
-    padding: 10px;
-    width: 30%;
-    height: 40px;
-    border-radius: 8px;
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    margin: 5px;
-}
-
-.card p {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    margin: 5px;
-}
-
-/* .icon {
-    margin-right: 5px;
-    
-} */
-
-.cardIcon {
-  width: 24px;      /* or 20px depending on your design */
-  height: 24px;     /* keep aspect ratio consistent */
-  margin-right: 8px; /* space between icon and text */
-  vertical-align: middle; /* align with title text */
-}

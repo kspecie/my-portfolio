@@ -1,0 +1,188 @@
+/* ---------- Embla Carousel Wrapper ---------- */
+.embla {
+  position: relative;
+  max-width: 1000px;
+  margin: 2rem auto;
+  height: 500px; /* Adjust height for your videos */
+}
+
+/* ---------- Optional section text ---------- */
+.projectsText {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Viewport (mask) ---------- */
+.viewport {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---------- Container (slides wrapper) ---------- */
+.container {
+  display: flex;
+  height: 100%;       /* Ensure slides fill viewport vertically */
+  transition: transform 0.35s ease; /* Smooth slide transitions */
+  padding: 0 10px;    /* Optional horizontal padding */
+}
+
+/* ---------- Slide styling ---------- */
+.slide {
+  flex: 0 0 65%;       /* Width of each slide */
+  height: 100%;
+  margin: 0 0.5rem;    /* Spacing between slides */
+  transform: scale(0.85);
+  opacity: 0.5;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  position: relative;
+}
+
+/* ---------- Center selected slide ---------- */
+.selected {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ---------- Video styling ---------- */
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* Fill slide without stretching */
+  border-radius: 20px;    /* Rounded corners */
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+/* ---------- Carousel arrows ---------- */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.prev { left: -100px; }
+.next { right: -100px; }
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 255, 0.7);
+}
+
+/* ---------- Optional: decorative fonts ---------- */
+.funFont2 {
+  font-family: "LXGW WenKai TC", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* 
+.embla {
+  position: relative;
+  /* border: 5px solid red;
+  max-width: 1000px;
+  margin: 2rem auto;
+  height: 100%
+}
+
+.projectsText {
+  margin: 0;
+  padding: 0;
+
+}
+
+.viewport {
+  overflow: hidden;
+  margin: 5px;
+  /* border: 5px solid red; */
+  /* height: 450px;
+}
+
+.container {
+  display: flex;
+  height: 90%;
+  padding: 5px;
+  transition: transform 0.35s ease;
+}
+
+.slide {
+  flex: 0 0 65%;
+  height: 100%;
+  padding: 1rem;
+  transform: scale(0.85);
+  opacity: 0.5;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  /* position: relative;
+  overflow: hidden; */
+/*}
+.slide.embla__slide--clone {
+  visibility: hidden;
+}
+
+.embla__slide--clone {
+  visibility: hidden;
+}
+
+.selected {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+}
+
+/* arrows */
+/*.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  border: none;
+  background: opacity(0.5);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.prev { left: 0px; }
+.next { right: 0px; }
+
+.prev:hover,
+.next:hover {
+  background: blue;
+}
+
+.funFont2 {
+  font-family: "LXGW WenKai TC", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+ */ 

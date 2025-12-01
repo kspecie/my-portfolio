@@ -1,7 +1,7 @@
 import React from 'react';
-import LinkedInIcon from '../assets/LinkedInIcon.png';
+//import LinkedInIcon from '../assets/LinkedInIcon.png';
 import styles from './Info.module.css';
-import KaylaSpecieSummary from '../../public/KaylaSpecieSummary.m4a'
+import KaylaSpecieSummary from '../../../public/KaylaSpecieSummary.m4a'
 
 interface CardProps {
     icon?: string | React.ReactNode;

@@ -13,3 +13,9 @@
   margin-bottom: 50px;
 }
 
+.tempHeader {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}

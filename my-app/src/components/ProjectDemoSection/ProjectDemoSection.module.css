@@ -1,0 +1,14 @@
+.projectDemoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+    background-color: white;
+}
+
+.funFont2 {
+  font-family: "LXGW WenKai TC", cursive;
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,11 +1,12 @@
-//import styles from 'AboutOverlay.module.css';
-
+import styles from './AboutOverlay.module.css';
+import { useState } from 'react';
 export default function AboutOverlay() {
 
+    const [funFactsClicked, setFunFactsClicked] = useState<boolean>(false);
+
     return (
-        <div>
+        <div className={styles.overlayContainer}>
         <h2>About Me</h2>
-        <p>This is the About Overlay component.</p>
         </div>
     );
 }

@@ -2,7 +2,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useState, useCallback, useRef } from "react";
 import styles from "./EmblaCarousel.module.css";
 
-const videos = ["/SampleVideo.mp4", "/SampleVideo.mp4", "/SampleVideo.mp4", "/SampleVideo.mp4"];
+const videos = ["/placeholder", "/placeholder", "/placeholder", "/placeholder"];
 
 export default function EmblaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({

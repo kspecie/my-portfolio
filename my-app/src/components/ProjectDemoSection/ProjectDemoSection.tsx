@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ProjectDemoSection.module.css';
 import EmblaCarousel from '../EmblaCarousel/EmblaCarousel';
 

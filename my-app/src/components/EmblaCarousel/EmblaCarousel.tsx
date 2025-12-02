@@ -24,7 +24,7 @@ export default function EmblaCarousel() {
       const selected = emblaApi.selectedScrollSnap();
       setSelectedIndex(selected);
 
-      videoRefs.current.forEach((video, i) => {
+      videoRefs.current.forEach((video) => {
         if (!video) return;
 
         // Only play the center real slide

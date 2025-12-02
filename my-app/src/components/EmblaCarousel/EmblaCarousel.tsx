@@ -7,12 +7,13 @@ const videos = ["/SampleVideo.mp4", "/SampleVideo.mp4", "/SampleVideo.mp4", "/Sa
 export default function EmblaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
-    loop: true,
+    loop: false,
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const videoRefs = useRef<HTMLVideoElement[]>([]);
-
+  const [isPlaying, setIsPlaying] = useState<number | null>(null);
+  const [isHovered, setIsHovered] = useState<number | null>(null);
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
@@ -47,9 +48,22 @@ export default function EmblaCarousel() {
   const handlePlay = (index: number) => {
     if (index !== selectedIndex) return;
 
+    // const video = videoRefs.current[index];
+    // video?.play();
+
     const video = videoRefs.current[index];
-    video?.play();
+
+    if (!video) return;
+
+    if (video.paused) {
+      video.play();
+      setIsPlaying(index);
+    } else {
+      video.pause();
+      setIsPlaying(null);
+    }
   };
+  
 
   return (
     <div className={styles.embla}>
@@ -61,6 +75,8 @@ export default function EmblaCarousel() {
               className={`${styles.slide} ${
                 index === selectedIndex ? styles.selected : ""
               }`}
+              onMouseEnter={() => setIsHovered(index)}
+              onMouseLeave={() => setIsHovered(null)}
             >
               <video
                 ref={(el) => {
@@ -69,11 +85,28 @@ export default function EmblaCarousel() {
                 src={src}
                 className={styles.video}
                 muted
-                loop
+                // loop
                 playsInline
                 controls={index === selectedIndex}
                 onClick={() => handlePlay(index)}
+                onPause={() => setIsPlaying(null)}
+                onPlay={() => setIsPlaying(index)}
               />
+              {index == selectedIndex && (isPlaying !== index || isHovered == index) && (
+                <button
+                  className={`${styles.playOverlay} ${
+                    isPlaying === index ? styles.pauseOverlay : ""
+                  }`}
+                  onClick={() => handlePlay(index)}
+                  aria-label={
+                    isPlaying === index ? "Pause video" : "Play video"}
+                  type='button'
+                >
+                  <span className={styles.playIcon}>
+                    {isPlaying === index ? "❚❚" : "▶"}
+                  </span>
+                </button>
+              )}
             </div>
           ))}
         </div>

@@ -1,15 +1,16 @@
-/* ---------- Embla Carousel Wrapper ---------- */
+
 .embla {
   position: relative;
   max-width: 1000px;
   margin: 2rem auto;
-  height: 500px; /* Adjust height for your videos */
+  height: 500px;
 }
 
 /* ---------- Optional section text ---------- */
 .projectsText {
   margin: 0;
   padding: 0;
+  border: 5px solid red;
 }
 
 /* ---------- Viewport (mask) ---------- */
@@ -23,14 +24,14 @@
 /* ---------- Container (slides wrapper) ---------- */
 .container {
   display: flex;
-  height: 100%;       /* Ensure slides fill viewport vertically */
-  transition: transform 0.35s ease; /* Smooth slide transitions */
-  padding: 0 10px;    /* Optional horizontal padding */
+  height: 100%;   
+  transition: transform 0.25s ease; /* Smooth slide transitions speed*/
+  padding: 0 10px;   
 }
 
 /* ---------- Slide styling ---------- */
 .slide {
-  flex: 0 0 65%;       /* Width of each slide */
+  flex: 0 0 70%;       /* Width of each slide */
   height: 100%;
   margin: 0 0.5rem;    /* Spacing between slides */
   transform: scale(0.85);
@@ -52,8 +53,8 @@
 .video {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* Fill slide without stretching */
-  border-radius: 20px;    /* Rounded corners */
+  object-fit: cover; 
+  border-radius: 20px;    
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
   display: block;
 }
@@ -86,103 +87,36 @@
   background: rgba(0, 0, 255, 0.7);
 }
 
-/* ---------- Optional: decorative fonts ---------- */
-.funFont2 {
-  font-family: "LXGW WenKai TC", cursive;
-  font-weight: 700;
-  font-style: normal;
-}
 
-
-/* 
-.embla {
-  position: relative;
-  /* border: 5px solid red;
-  max-width: 1000px;
-  margin: 2rem auto;
-  height: 100%
-}
-
-.projectsText {
-  margin: 0;
-  padding: 0;
-
-}
-
-.viewport {
-  overflow: hidden;
-  margin: 5px;
-  /* border: 5px solid red; */
-  /* height: 450px;
-}
-
-.container {
-  display: flex;
-  height: 90%;
-  padding: 5px;
-  transition: transform 0.35s ease;
-}
-
-.slide {
-  flex: 0 0 65%;
-  height: 100%;
-  padding: 1rem;
-  transform: scale(0.85);
-  opacity: 0.5;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-  /* position: relative;
-  overflow: hidden; */
-/*}
-.slide.embla__slide--clone {
-  visibility: hidden;
-}
-
-.embla__slide--clone {
-  visibility: hidden;
-}
-
-.selected {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
-}
-
-/* arrows */
-/*.prev,
-.next {
+.playOverlay {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: black;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  padding-left: 12px; 
+  background: rgba(0, 0, 0, 0.3);
   color: white;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   border-radius: 50%;
   border: none;
-  background: opacity(0.5);
-  width: 60px;
-  height: 60px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 5;
 }
 
-.prev { left: 0px; }
-.next { right: 0px; }
-
-.prev:hover,
-.next:hover {
-  background: blue;
+.playOverlay:hover {
+  background: rgba(0, 0, 255, 0.7);
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
-.funFont2 {
-  font-family: "LXGW WenKai TC", cursive;
-  font-weight: 700;
-  font-style: normal;
+.pauseOverlay .playIcon {
+  letter-spacing: 4px;
+  transform: translateX(2px);
+  padding-right: 5px;
 }
-
- */ 

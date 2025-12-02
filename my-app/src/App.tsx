@@ -1,18 +1,16 @@
 import EmblaCarousel from './components/EmblaCarousel/EmblaCarousel.tsx';
-import Headshot from './components/Headshot/Headshot.tsx';
 import Info from './components/Info/Info.tsx';
-import AboutOverlay from './components/AboutOverlay/AboutOverlay.tsx';
 import styles from './App.module.css'
+import AboutSection from './components/AboutSection/AboutSection.tsx';
 
 
 function App() {
 
   return (
     <>
-      <div className={styles.parent}>
-        <Headshot />
-        <AboutOverlay />
-      </div>
+    <div className={styles.parent}>
+      <AboutSection  />
+    </div>
       <Info />
       <EmblaCarousel />
     </>

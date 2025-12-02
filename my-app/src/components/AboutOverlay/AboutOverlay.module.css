@@ -13,3 +13,14 @@
     height: 100%;
     background-color: rgba(248, 244, 244, 0.821);
 }
+
+.exitButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+}

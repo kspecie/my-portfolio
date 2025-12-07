@@ -16,9 +16,9 @@ export default function Headshot({ onClick }: HeadshotProps) {
           Click for Fun Facts! <br></br>&darr;{" "}
         </p>
         <button className={styles.headshot} onClick={onClick}>
-          {!loaded && <div className={styles.placeholder}> </div>} 
+          {!loaded && <div className={styles.placeholder}> </div>}
 
-           <img
+          <img
             src={KaylaHeadshot}
             width='400'
             height='400'
@@ -27,13 +27,21 @@ export default function Headshot({ onClick }: HeadshotProps) {
             }`}
             onLoad={() => setLoaded(true)}
             alt="Kayla's Face"
-          ></img> 
-         </button>
+          ></img>
+        </button>
 
         <h1 className={styles.funFont2}>
           Hi, I'm Kayla!
           <span className={styles.handWave}> &#x1F44B;&#x1F3FC; </span>
         </h1>
+        <div className={styles.socialLinksContainer}>
+          <a href='https://www.linkedin.com/in/kaylaspecie/' target='_blank'>
+            <img src='/LI-Logo.png' alt="Kayla's LinkedIn"></img>
+          </a>
+          <a href='https://github.com/kspecie' target='_blank'>
+            <img src='/GitHub_Lockup_Dark.png' alt="Kayla's GitHub"></img>
+          </a>
+        </div>
       </div>
     );
 }

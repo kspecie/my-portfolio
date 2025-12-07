@@ -1,39 +1,51 @@
 
 .embla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
-  max-width: 1000px;
-  margin: 2rem auto;
-  height: 500px;
+  max-width: 75%;
+  min-height: 90%;;  
+  /* border: 5px solid black; */
 }
 
 
 .viewport {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   width: 100%;
-  margin: 0 auto;
+  /* padding: 2px; */
+  /* margin-bottom: 100px; */
+  /* border:5px solid blue; */
 }
 
 /* ---------- Container (slides wrapper) ---------- */
-.container {
+ .container {
   display: flex;
-  height: 100%;   
+  flex-direction: row;
+  height: 90%; 
+  width: 90%;  
   transition: transform 0.25s ease; /* Smooth slide transitions speed*/
-  padding: 0 10px;   
+  /* border: 5px solid purple;  */
 }
 
 /* ---------- Slide styling ---------- */
 .slide {
-  flex: 0 0 70%;       /* Width of each slide */
+  flex: 0 0 90%;     /* Width of each slide */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  margin: 0 0.5rem;    /* Spacing between slides */
+  margin: 0 0.5rem;   /* Spacing between slides */
   transform: scale(0.85);
   opacity: 0.5;
   transition: transform 0.35s ease, opacity 0.35s ease;
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  position: relative;
+  /* border: 5px solid green; */
+  
 }
 
 /* ---------- Center selected slide ---------- */
@@ -50,6 +62,7 @@
   border-radius: 20px;    
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
   display: block;
+  /* border: 5px solid red; */
 }
 
 /* ---------- Carousel arrows ---------- */
@@ -113,4 +126,21 @@
   letter-spacing: 4px;
   transform: translateX(2px);
   padding-right: 5px;
+}
+
+.videoDescription{
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 10px;
+  padding: 5px;
+  /* bottom: 15px; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* border: solid 5px orange; */
+  background: white;
+  color: black;
+  font-size: 2rem;
 }

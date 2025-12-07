@@ -9,15 +9,15 @@ import Footer from './components/Footer/Footer.tsx';
 function App() {
 
   return (
-    <>
-      <h2 className={styles.tempHeader}>**Actively under construction.. Please check back for updates**</h2> 
-      <div className={styles.parent}>
-        <AboutSection />
-      </div>
+    <div className={styles.parent}>
+      <h2 className={styles.tempHeader}>
+        **Actively under construction.. Please check back for updates**
+      </h2>
+      <AboutSection />
       <Info />
       <ProjectDemoSection />
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -3,6 +3,12 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import styles from "./EmblaCarousel.module.css";
 
 const videos = ["/placeholder", "/placeholder", "/placeholder", "/placeholder"];
+const videoDescriptions = [
+  "WanderHer: A web application that allows users to track their fitness goals and monitor progress over time.",
+  "TBD: An e-commerce platform that provides a seamless shopping experience with personalized recommendations.",
+  "Project 3: A social networking app that connects people with similar interests and facilitates event planning.",
+  "Project 4: A machine learning model that predicts stock prices based on historical data and market trends.",
+];
 
 export default function EmblaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -92,21 +98,31 @@ export default function EmblaCarousel() {
                 onPause={() => setIsPlaying(null)}
                 onPlay={() => setIsPlaying(index)}
               />
-              {index == selectedIndex && (isPlaying !== index || isHovered == index) && (
-                <button
-                  className={`${styles.playOverlay} ${
-                    isPlaying === index ? styles.pauseOverlay : ""
-                  }`}
-                  onClick={() => handlePlay(index)}
-                  aria-label={
-                    isPlaying === index ? "Pause video" : "Play video"}
-                  type='button'
-                >
-                  <span className={styles.playIcon}>
-                    {isPlaying === index ? "❚❚" : "▶"}
-                  </span>
-                </button>
-              )}
+              {index == selectedIndex &&
+                (isPlaying !== index || isHovered == index) && (
+                  <button
+                    className={`${styles.playOverlay} ${
+                      isPlaying === index ? styles.pauseOverlay : ""
+                    }`}
+                    onClick={() => handlePlay(index)}
+                    aria-label={
+                      isPlaying === index ? "Pause video" : "Play video"
+                    }
+                    type='button'
+                  >
+                    <span className={styles.playIcon}>
+                      {isPlaying === index ? "❚❚" : "▶"}
+                    </span>
+                  </button>
+                )}
+              <div className={styles.videoDescription}>
+                {videoDescriptions.map((src, index) => (
+                <div key={index}>
+               
+                </div>))}
+                
+              
+                test</div>
             </div>
           ))}
         </div>

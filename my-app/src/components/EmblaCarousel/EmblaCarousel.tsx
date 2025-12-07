@@ -3,12 +3,12 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import styles from "./EmblaCarousel.module.css";
 
 const videos = ["/placeholder", "/placeholder", "/placeholder", "/placeholder"];
-const videoDescriptions = [
-  "WanderHer: A web application that allows users to track their fitness goals and monitor progress over time.",
-  "TBD: An e-commerce platform that provides a seamless shopping experience with personalized recommendations.",
-  "Project 3: A social networking app that connects people with similar interests and facilitates event planning.",
-  "Project 4: A machine learning model that predicts stock prices based on historical data and market trends.",
-];
+// const videoDescriptions = [
+//   "WanderHer: A web application that allows users to track their fitness goals and monitor progress over time.",
+//   "TBD: An e-commerce platform that provides a seamless shopping experience with personalized recommendations.",
+//   "Project 3: A social networking app that connects people with similar interests and facilitates event planning.",
+//   "Project 4: A machine learning model that predicts stock prices based on historical data and market trends.",
+// ];
 
 export default function EmblaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -115,11 +115,11 @@ export default function EmblaCarousel() {
                     </span>
                   </button>
                 )}
-              <div className={styles.videoDescription}>
-                {videoDescriptions.map((src, index) => (
+              <div className={styles.videoDescriptions}>
+                {/* {videoDescriptions.map((src, index) => (
                 <div key={index}>
                
-                </div>))}
+                </div>))} */}
                 
               
                 test</div>

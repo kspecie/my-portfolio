@@ -97,7 +97,7 @@
 
 .playOverlay {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90px;
@@ -128,19 +128,34 @@
   padding-right: 5px;
 }
 
-.videoDescription{
-  /* position: absolute; */
+.videoDescriptions {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  margin-top: 10px;
-  padding: 5px;
-  /* bottom: 15px; */
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
-  /* border: solid 5px orange; */
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 5px 10px;
   background: white;
   color: black;
   font-size: 2rem;
+}
+
+.description {
+  align-self: flex-start;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.tools {
+  align-self: flex-start;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.link {
+  align-self: flex-start;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+.link:hover {
+  text-decoration: underline;
 }

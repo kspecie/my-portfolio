@@ -2,7 +2,38 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useState, useCallback, useRef } from "react";
 import styles from "./EmblaCarousel.module.css";
 
-const videos = ["/placeholder", "/placeholder", "/placeholder", "/placeholder"];
+type VideoItem = {
+  src: string,
+  description: string,
+  tools?: string,
+  link?: string
+}
+
+const videos: VideoItem[] = [
+  {
+    src: "/wanderHerRecordingUpdated.mov",
+    description:
+      "AI-powered chat tailored to provide recommendations and advice to solo female travelers.",
+    tools: "Mistral AI SDK, Next.js, TypeScript",
+    link: "https://wanderher.vercel.app/",
+  },
+  {
+    src: "/SampleVideo.mp4",
+    description: "WanderHer: a web app that chats",
+    tools: "TBD",
+  },
+  {
+    src: "/SampleVideo.mp4",
+    description: "WanderHer: a web app that chats",
+    tools: "TBD",
+  },
+  {
+    src: "/SampleVideo.mp4",
+    description: "WanderHer: a web app that chats",
+    tools: "TBD",
+  },
+];
+
 // const videoDescriptions = [
 //   "WanderHer: A web application that allows users to track their fitness goals and monitor progress over time.",
 //   "TBD: An e-commerce platform that provides a seamless shopping experience with personalized recommendations.",
@@ -30,8 +61,9 @@ export default function EmblaCarousel() {
       const selected = emblaApi.selectedScrollSnap();
       setSelectedIndex(selected);
 
-      videoRefs.current.forEach((video) => {
+      videoRefs.current.forEach((video, index) => {
         if (!video) return;
+        if (index === selected) return;
 
         // Only play the center real slide
         const slide = emblaApi.slideNodes()[selected];
@@ -75,7 +107,7 @@ export default function EmblaCarousel() {
     <div className={styles.embla}>
       <div className={styles.viewport} ref={emblaRef}>
         <div className={styles.container}>
-          {videos.map((src, index) => (
+          {videos.map((video, index) => (
             <div
               key={index}
               className={`${styles.slide} ${
@@ -88,7 +120,7 @@ export default function EmblaCarousel() {
                 ref={(el) => {
                   if (el) videoRefs.current[index] = el;
                 }}
-                src={src}
+                src={video.src}
                 className={styles.video}
                 muted
                 // loop
@@ -116,13 +148,21 @@ export default function EmblaCarousel() {
                   </button>
                 )}
               <div className={styles.videoDescriptions}>
-                {/* {videoDescriptions.map((src, index) => (
-                <div key={index}>
-               
-                </div>))} */}
-                
-              
-                test</div>
+                <p className={styles.description}><strong>Description: </strong>{video.description}</p>
+                <p className={styles.description}><strong>Tools: </strong>{video.tools}</p>
+                {video.link && (<p className={styles.description}>
+                  <strong>Link: </strong>
+                <a 
+                href={video.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+                >
+                  View Project
+                </a>
+                </p>
+                )}
+              </div>
             </div>
           ))}
         </div>

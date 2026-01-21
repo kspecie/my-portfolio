@@ -11,7 +11,7 @@ type VideoItem = {
 
 const videos: VideoItem[] = [
   {
-    src: "/wanderHerRecordingUpdated.mov",
+    src: "https://aab3xb7dcewk2vq7.public.blob.vercel-storage.com/wanderHerRecordingUpdated.mov",
     description:
       "AI-powered chat tailored to provide recommendations and advice to solo female travelers.",
     tools: "Mistral AI SDK, Next.js, TypeScript",
